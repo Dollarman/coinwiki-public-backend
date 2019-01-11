@@ -1,0 +1,44 @@
+<h2>Online Community Ranking:</h2>
+<ul>
+  <li>Github developer activity:  {{ partial "stat.html" (dict "feature" .Params.github_activity) }} </li>
+  <li>Twitter activity:  {{ partial "stat.html" (dict "feature" .Params.twitter_activity) }} </li>
+  <li>Reddit activity: {{ partial "stat.html" (dict "feature" .Params.reddit_activity) }} </li>
+  <li>Discord chat activity:  {{ partial "stat.html" (dict "feature" .Params.discord_activity) }} </li>
+  <li>BitcoinTalk forum activity:  {{ partial "stat.html" (dict "feature" .Params.bttalk_activity) }}</li>
+  <li>News mentions:  {{ partial "stat.html" (dict "feature" .Params.news_activity) }}</li>
+  <li>Google Search Trends:  {{ partial "stat.html" (dict "feature" .Params.google_trends_activity) }}</li>
+</ul>
+<h2> Financial Data: </h2>
+<ul>
+  <li> Total supply: {{ partial "stat.html" (dict "feature" .Params.total_supply) }} </li>
+  <li> Current supply: {{ partial "stat.html" (dict "feature" .Params.current_supply) }} </li>
+  <li> Highest achieved Marketcap: {{ partial "stat.html" (dict "feature" .Params.marketcap) }} </li>
+  <li> Trade volume in last 24 hours: {{ partial "stat.html" (dict "feature" .Params.volume) }} </li>
+  <li> Highest achieved trade volume: {{ partial "stat.html" (dict "feature" .Params.volume_change) }} </li>
+  <li> Highest achieved price ($USD): {{ partial "stat.html" (dict "feature" .Params.price_current) }} </li>
+  <li> Lowest price in past 30 days:  {{ partial "stat.html" (dict "feature" .Params.price_lowest) }}  </li>
+  <li> Highest price in 30 days: {{ partial "stat.html" (dict "feature" .Params.price.highest) }} </li>
+  <li> Exchanges (where to buy): {{ partial "stat.html" (dict "feature" .Params.exchanges) }} </li>
+</ul>
+
+<h2> General Questions: </h2>
+<ul>
+  <li> Can I give the public address to everyone: </li>
+  <li> Where can I just invest in it without worry: </li>
+  <li> Which exchanges have this coin: </li>
+  <li> Where can I use this coin to buy something: </li>
+  <li> Is it legal to own {{.Params.name}}?: </li>
+  <li> Known scams and malicious apps: </li>
+  <li> Which one is the address I can share: </li>
+</ul>
+
+<h2>Official Social Media Links:</h2>
+<ul>
+  <li> Twitter: </li>
+  <li> Facebook: </li>
+  <li> Reddit: </li>
+  <li> Discord: </li>
+  <li> Telegram: </li>
+  <li> BitcoinTalk: </li>
+  <li> Project Roadmap & Update History: </li>
+</ul>

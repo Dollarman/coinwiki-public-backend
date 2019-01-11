@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+{{ .Hugo.Generator }}
+<title>{{ .Title }} :: {{ .Site.Title }}</title>
+<link rel="shortcut icon" href="{{.Site.BaseURL}}images/favicon.png" type="image/x-icon" />
+<link href="{{.Site.BaseURL}}css/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
+<link href="{{.Site.BaseURL}}css/nucleus.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/bundle.css">
+
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/bootstrap.min.css">
+<script src="{{.Site.BaseURL}}js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "{{.Site.BaseURL}}";
+</script>
+{{ partial "custom-head.html" . }}

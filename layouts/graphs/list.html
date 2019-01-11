@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "flex/head.html" . }}
+
+    <style>
+    h4 {margin-bottom: 25px;}
+    li {margin-top: 0;}
+    ul {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    img {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    </style>
+
+  </head>
+  <body data-url="{{ .RelPermalink }}">
+
+   {{ partial "flex/body-beforecontent.html" . }}
+
+   <script type="text/javascript">
+     $.getJSON('/json/latestCorr.json', function (data) { var lastestCorr = data; });
+
+   </script>
+
+
+    {{ partial "flex/body-aftercontent.html" . }}
+
+    {{ block "footer" . }}
+    {{ end }}
+
+    {{ partial "custom-footer.html" . }}
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "flex/head.html" . }}
+    <style>
+    li {margin-top: 15px;}
+    span {
+      font-family: consolas;
+      color: red;
+    }
+    /* Tooltip container */
+    .tooltip::after {
+      content: attr(data-tip) ;
+
+      /* font-size: 10px; */
+      position:absolute;
+      z-index: 999;
+      /* white-space:nowrap; */
+      /* bottom:9999px; */
+      /* left: 50%; */
+      /* background:#000; */
+      /* color:#e0e0e0; */
+      background: red;
+      color: white;
+      padding:0px 7px;
+      /* line-height: 24px; */
+      /* height: 24px; */
+      /* top: 50px; */
+      opacity: 0;
+      transition:opacity 0.4s ease-out;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+      /* bottom:-1px; */
+    }
+
+    /* Start CSS for skillbars */
+    .bar-text{margin-bottom: 10px}
+    .w3-container{padding:0.01em 16px}
+    .w3-container:after,.w3-container:before{content:""; display:table; clear:both}
+    /* lighter baby blue skillbar color #30d2bf  */
+    /* perfect deep green skillbar color rgb(0, 150, 2) !important */
+    .skillbar{background-color: #009688!important; height:18px!important; color: white; text-align: center}
+    .skillbar-container{background-color:#f1f1f1!important;}
+    .skillbar, .skillbar-container{border-radius:7px; font-size:100% !important;}
+    /*Latest addition Oct 10*/
+    .skillbar-container:hover {
+        opacity: .6;
+        transition-duration: 1.5s;
+    }
+    </style>
+    <!-- ChartJS code -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script> -->
+
+    <!-- Dygraph code for cumulative sum and other time-series -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dygraph/2.1.0/dygraph.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/dygraph/2.1.0/dygraph.min.css" />
+
+  </head>
+  <body data-url="{{ .RelPermalink }}">
+
+
+
+     {{ partial "flex/body-beforecontent.html" . }}
+
+    <h1>{{.Title}}</h1>
+
+    {{ if .Page.Content }}
+        {{ .Page.Content }}
+    {{ else }}
+
+        <div class="w3-container" id='chartContainer'>
+          {{ if eq .Params.graphType "hbar" }}
+            <p class='bar-text' id='chart' style="width: 50%; height: 720px;" >
+              Strong Positive Correlations
+            </p>
+
+          {{ else }}
+          <input id="coin1" placeholder="Graph1" onchange="updateCoin1(this.value)" type="text" list="coins" style="background-color: inherit; width: 120px; display: inline-block;"/>
+          <input id="coin2" placeholder="Graph2" onchange="updateCoin2(this.value)" type="text" list="coins" style="background-color: inherit; width: 120px; display: inline-block;"/>
+
+          <datalist id="coins">
+          </datalist>
+
+          <p class='bar-text' id='chart' style="width: 100%; height: 720px;" >
+          </p>
+          {{end}}
+        </div>
+        <script type="text/javascript">
+        // $("#coin1").
+        function updateCoin1(val){
+          name1 = val;
+          updateDG();
+        }
+        // $("#coin2").
+        function updateCoin2(val) {
+          name2 = val;
+          updateDG();
+        }
+
+        var chartID = "chart";
+        var name1;
+        var name2;
+        var labels;
+        var values;
+        var dict;
+        var chartStr = '';
+
+        function hbar(dict, id) {
+
+        }
+
+        function updateDG() {
+          values = [];
+          // iterate over range if possible, not sure if you can iterate dicts like that.
+          for (var time in dict[name1]) {
+            values.push( [new Date(time), dict[name1][time], dict[name2][time]] );
+          }
+          DG.updateOptions( {'file': values, "labels": ["timestamp", name1, name2] } );
+        } // END updateDG
+
+        $.getJSON( {{ .Params.graph }} , function (d) {
+
+          startDate = d['startDate'];
+          endDate = d['endDate'];
+          dict = d['data'];
+
+          labels = Object.keys(dict);
+          values = Object.values(dict);
+
+          {{ if eq .Params.graphType "hbar" }}
+            for (var skill in dict) {
+              if (dict[skill] > 0.70) {
+                chartStr +=  '<div class="skillbar-container"> <div class="w3-container skillbar" style="margin-top:2px; width:' + dict[skill] * 100 + '%"> ' + skill + ' &nbsp;&nbsp;&nbsp;' + dict[skill].toFixed(2) + '  </div> </div>';
+              }
+            }
+            document.getElementById(chartID).innerHTML += chartStr;
+          {{ end }}
+
+          {{ if eq .Params.graphType "dygraph"}}
+            // Fill up datalist of labels to autocomplete.
+            for (var label of labels) {
+              chartStr += "<option>" + label + "</option>";
+            }
+            document.getElementById("coins").innerHTML = chartStr;
+            // Select 2 random coins to graph.
+            name1 = labels[Math.floor(Math.random()*labels.length)];
+            name2 = labels[Math.floor(Math.random()*labels.length)];
+            // draw the dygraph
+            values = [];
+            // iterate over range if possible, not sure if you can iterate dicts like that.
+            for (var time in dict[name1]) {
+              values.push( [new Date(time), dict[name1][time], dict[name2][time]] );
+            }
+
+            // document.getElementById("chart").innerHTML = "";
+            DG = new Dygraph(document.getElementById(chartID),
+                        values,
+                        {"labels": ["timestamp", name1, name2]
+                        }
+            );
+          {{ end }}
+        });
+
+
+
+        // fillMap(dict, "correlations");
+        </script>
+    {{end}}
+
+  {{ if .Params.notes }}
+    <h2>Special Notes: </h2>
+      <span>{{.Params.notes}}</span>
+  {{ end }}
+
+
+    {{ partial "flex/body-aftercontent.html" . }}
+
+    {{ block "footer" . }}
+    {{ end }}
+
+    {{ partial "custom-footer.html" . }}
+  </body>
+</html>

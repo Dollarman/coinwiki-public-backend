@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="100mm"
+   viewBox="0 0 210 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="Dollarman-logo-wip.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="437.90529"
+     inkscape:cy="201.82788"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1006"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Letters">
+    <ellipse
+       style="fill:#00ff00;fill-opacity:0.83333333;stroke-width:0.26458332"
+       id="path4531"
+       cx="40.065475"
+       cy="52.70573"
+       rx="11.528275"
+       ry="11.386532" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4533"
+       style="font-style:normal;font-weight:normal;font-size:53.33333588px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#c83737;fill-opacity:1;stroke:none;"
+       transform="matrix(0.40026178,0,0,0.5440781,-26.978521,-17.157995)"><flowRegion
+         id="flowRegion4535"
+         style="font-size:53.33333588px;fill:#c83737;"><rect
+           id="rect4537"
+           width="72.142868"
+           height="62.85714"
+           x="197.85715"
+           y="99.738472"
+           style="font-size:53.33333588px;fill:#c83737;" /></flowRegion><flowPara
+         id="flowPara4539">11</flowPara></flowRoot>    <path
+       sodipodi:type="spiral"
+       style="fill:#00ff00;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332"
+       id="path4541"
+       sodipodi:cx="95.281586"
+       sodipodi:cy="53.896004"
+       sodipodi:expansion="1"
+       sodipodi:revolution="3"
+       sodipodi:radius="16.01667"
+       sodipodi:argument="-18.535721"
+       sodipodi:t0="0"
+       d="m 95.281586,53.896004 c 0.763826,0.247908 0.04267,1.151932 -0.412041,1.26953 -1.232235,0.318682 -2.133169,-1.008392 -2.12702,-2.093611 0.011,-1.941203 1.98194,-3.173007 3.775182,-2.98451 2.631655,0.276627 4.233883,2.96516 3.842003,5.456752 -0.522321,3.320901 -3.951354,5.303134 -7.138326,4.69949 -4.01048,-0.759626 -6.376601,-4.938844 -5.556979,-8.819894 0.992671,-4.700471 5.927047,-7.452484 10.501464,-6.414469 5.390791,1.223266 8.529881,6.915691 7.271961,12.183035 -1.45233,6.081357 -7.904631,9.608293 -13.864608,8.129448 -6.772105,-1.680357 -10.68741,-8.893772 -8.986938,-15.546175 1.907673,-7.462991 9.883069,-11.767043 17.227746,-9.844428 8.15398,2.134466 12.84706,10.872481 10.70192,18.909317" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4543"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.57372259,0,0,0.77075909,-143.05032,-85.772895)"><flowRegion
+         id="flowRegion4545"><rect
+           id="rect4547"
+           width="217.1828"
+           height="86.873116"
+           x="453.05341"
+           y="156.72935" /></flowRegion><flowPara
+         id="flowPara4549"
+         style="fill:#ff0000">R</flowPara></flowRoot>  </g>
+  <g
+     inkscape:label="Round D"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-197)">
+    <ellipse
+       id="path14"
+       cx="-3.9944048"
+       cy="243.92981"
+       rx="25.190153"
+       ry="24.169878"
+       style="fill:#00ff00;fill-opacity:0.64824123;stroke-width:0.25208142" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Round D Cutout">
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.83333331;stroke-width:0.2306532"
+       ry="22.468985"
+       rx="22.68606"
+       cy="243.55183"
+       cx="-3.4746876"
+       id="ellipse4524"
+       transform="translate(0,-197)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Stick">
+    <rect
+       transform="translate(0,-197)"
+       id="rect10"
+       width="6.9365311"
+       height="48.067822"
+       x="-0.038464557"
+       y="219.828"
+       style="stroke-width:0.26458332;fill:#d35f5f"
+       ry="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+       id="rect4553"
+       width="35.241116"
+       height="60.163834"
+       x="-33.943226"
+       y="16.879177"
+       ry="3.4017742" />
+  </g>
+</svg>

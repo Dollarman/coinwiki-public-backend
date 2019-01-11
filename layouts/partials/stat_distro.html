@@ -1,0 +1,7 @@
+<!-- Distribution of Coin Supply: -->
+<ul>
+  <li> Mining: {{ partial "stat.html" (dict "feature" .Params.dist_mining) }} </li>
+  <li> Pre-release sale (ICO):  {{ partial "stat.html" (dict "feature" .Params.dist_ico) }} </li>
+  <li> Free Distribution Event (Airdrop):  {{ partial "stat.html" (dict "feature" .Params.dist_airdrop) }} </li>
+  <li> Expected End of distribution:  {{ partial "stat.html" (dict "feature" .Params.dist_end) }} </li>
+</ul>

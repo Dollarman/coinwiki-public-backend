@@ -1,0 +1,19 @@
+{{/* takes a dict called feature as argument. Required Attributes:  text, source, comment  */}}
+
+{{ if .feature.source }}
+  <span>
+    {{ .feature.text }} <a href="{{ .feature.source }}" class="fa-sm" style="" target="_blank"> [link] </a>
+    {{ if .feature.comment }}
+      <br>
+      <span style="color:#222"> ⮡ Note: </span> {{ .feature.comment }}
+    {{ end }}
+  </span>
+{{else}}
+  <span>
+    {{.feature.text}}
+    {{ if .feature.comment }}
+      <br>
+      <span style="color:#222"> ⮡ Note: </span> {{ .feature.comment }}
+    {{ end }}
+  </span>
+{{end}}

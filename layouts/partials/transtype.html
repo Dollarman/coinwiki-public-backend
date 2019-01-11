@@ -1,0 +1,16 @@
+{{if .feature.source}}
+  <span>
+    {{if .feature.public }}
+      <span style=""
+      <i class="fa fa-comment-dots tooltip" style="color:red" data-tip="{{.feature.comment}}"> </i>
+    {{end}}
+  </span>
+
+{{else}}
+  <span> {{.feature.text}} </span>
+  {{if .feature.comment}}
+    <i class="fa fa-comment-dots tooltip" style="color:red" data-tip="{{.feature.comment}}"> </i>
+    {{/* <span class="tooltip" data-tip=" {{.feature.comment}}">    </span> */}}
+  {{end}}
+
+{{end}}

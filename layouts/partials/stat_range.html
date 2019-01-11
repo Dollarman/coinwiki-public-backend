@@ -1,0 +1,17 @@
+{{/* takes a dict called feature as argument. Required Attributes:  text, source, comment  */}}
+
+{{ if .feature.source }}
+  <span> {{ .feature.text }}
+    {{$sources := (split .feature.source ",") }}
+    {{ range $sources }}
+      <a href="{{ . }}" class="dropdown" style="display:none;"> {{ . }} </a>
+    {{end}}
+  </span>
+{{else}}
+  <span> {{.feature.text}} </span>
+  {{if .feature.comment}}
+    <i class="fa fa-comment-dots tooltip" style="color:red" data-tip="{{.feature.comment}}"> </i>
+    {{/* <span class="tooltip" data-tip=" {{.feature.comment}}">    </span> */}}
+  {{end}}
+
+{{end}}

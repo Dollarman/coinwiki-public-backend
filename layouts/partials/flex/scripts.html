@@ -1,0 +1,11 @@
+<script src="{{.Site.BaseURL}}js/clipboard.min.js"></script>
+
+<link href="{{.Site.BaseURL}}css/featherlight.min.css" rel="stylesheet">
+<script src="{{.Site.BaseURL}}js/featherlight.min.js"></script>
+
+{{if eq .Site.Params.highlightClientSide true}}
+<script src="{{.Site.BaseURL}}js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{{end}}
+
+<script src="{{.Site.BaseURL}}theme-flex/script.js"></script>

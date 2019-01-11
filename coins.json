@@ -1,0 +1,99 @@
+{"Bitcoin": {
+  "title": "Bitcoin - BTC"
+  "name": "Bitcoin"
+  "symbol": "BTC"
+  "notes": null
+  ## TODO: Make numerical features only numbers in YAML and add the text on the HTML.
+  "launch_date": "9 January 2009"
+  "author":
+    "text": "Satoshi Nakamoto"
+    "source":
+    "comment": "Satoshi Nakamoto is a fake name used to conceal the identities of the real author or group of authors of the whitepaper. However, this name held a presence in online forums until December 13, 2010."
+  "purpose": "Peer-to-Peer censorship-resistant currency."
+  "org":
+    "text": "Bitcoin Core"
+    "source": "https://bitcoincore.org/"
+    "comment": null
+  "orgtype": #Non-profit, For-profit, DAO, Open Source project
+    "text": "Open Source project."
+    "source": null
+    "comment": null
+  "opensource": "Yes"
+  "country": "Unknown"
+  "privacy":
+    "text": "No"
+    "source": null
+    "comment": "All transactions are public and searchable online. The Bitcoin protocol does not offer features of privacy"
+  "network":
+    "text": "Mainnet"
+    "source": null
+    "comment": null
+  "devshare":
+    "text": "It's estimated Satoshi owns 1 million BTC."
+    "source":
+    "comment": About 4.76% of the Total supply
+  "distribution": Mining only.
+  "ico":
+    "text": No. All Bitcoins have been produced through mining only.
+    "source": null
+    "comment": null
+  "mined":
+    "text": 'Yes'
+    "source": null
+    "comment": Mining is most profitable using machines called ASICs built exclusively for mining Bitcoin. While mining can technically done using personal computers but it is not profitable.
+  "mining_tool": #ASIC, CPU, GPU, Web Browsers, IOT
+    "text": ASICs
+    "source": null
+    "comment": Mining Bitcoin using regular computers is not profitable anymore. Current ASICs provide thousands of times faster computation.
+  "mining_alg":
+    "text": SHA-256
+    "source": null
+    "comment":
+  "tps":
+    "text": "5"
+    "source": null
+    "comment": null
+
+  "consensus": "Proof of Work"
+
+  "developers":
+    "text": "Open Source MIT license"
+    "source": "https://bitcoincore.org/en/team/"
+    "comment": null
+  "partnerships":
+    "text": null
+    "source": null
+    "comment": null
+  "whitepaper": {
+    "text": "Bitcoin: A Peer-to-Peer Electronic Cash System"
+    "source": "https://bitcoin.org/bitcoin.pdf"
+    "comment": null
+    }
+  "wallet_mobile":
+    "text": null
+    "source": null
+    "comment": null
+  "wallet_desktop":
+    "text": null
+    "source": null
+    "comment": null
+  "wallet_web":
+    "text": null
+    "source": null
+    "comment": null
+
+  "totalsupply": "21,000,000 BTC"
+  "available_supply":
+  "marketcap": null
+  "volume": null
+  "fee": null
+  "confirmation_time": null
+  "avg_github_act": null
+  "latest_dev_update": null
+  "price_current": null
+  "price_change": null
+  "price_lowest": null
+  "price_highest": null
+  "exchanges": null
+  }
+}

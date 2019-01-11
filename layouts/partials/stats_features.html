@@ -1,0 +1,50 @@
+
+<h2> About: </h2>
+<ul>
+  <li> Official website: {{ partial "link.html" (dict "url" .Params.website) }} </li>
+  <li> Released on: {{ partial "stat.html" (dict "feature" .Params.launch_date) }} </li>
+  <li> Created by: {{ partial "stat.html" (dict "feature" .Params.author) }} </li>
+  <li> Country of origin: {{ partial "stat.html" (dict "feature" .Params.country) }} </li>
+  <li> Main purpose: {{ partial "stat.html" (dict "feature" .Params.purpose) }} </li>
+  <li> Managing Organization: {{ partial "stat.html" (dict "feature" .Params.org) }} </li>
+  <li> Type of Organization: {{ partial "stat.html" (dict "feature" .Params.orgtype) }} </li>
+  <li> How much do developers own?: {{ partial "stat.html" (dict "feature" .Params.devshare) }} </li>
+  <li> Is it a derivative token of another network?: {{ partial "stat.html" (dict "feature" .Params.network) }} </li>
+  <li> Programmable with Smart Contracts: {{ partial "stat.html" (dict "feature" .Params.smartcontract) }}</li>
+  <li> Privacy features: {{ partial "stat.html" (dict "feature" .Params.privacy) }} </li>
+  <li> Whitepaper: <a href="{{.Params.whitepaper.source}}">{{.Params.whitepaper.text}}</a></li>
+</ul>
+
+<h2>Tech Specs: </h2>
+<ul>
+<li> Types of transactions: {{ partial "stat.html" (dict "feature" .Params.transtype) }} </li>
+  <li> Can it be mined?: {{ partial "stat.html" (dict "feature" .Params.mined) }} </li>
+  <li> Primary mining tool: {{ partial "stat.html" (dict "feature" .Params.miningtool) }} </li>
+  <li> Mining Algorithm: {{ partial "stat.html" (dict "feature" .Params.mining_alg) }} </li>
+  {{/* <li> Number of Transactions in last 24 hours:  {{ partial "stat.html" (dict "feature" .Params.numTransactions) }} </li>
+  <li> Highest achieved transaction speed (txs per second): {{ partial "stat.html" (dict "feature" .Params.tps) }} </li>
+  <li> Average time to confirm transactions: {{ partial "stat.html" (dict "feature" .Params.confirmation_time) }} </li> */}}
+  <li> Consensus protocol:  {{ partial "stat.html" (dict "feature" .Params.consensus) }} </li>
+</ul>
+
+<h2> Wallet Details: </h2>
+<ul>
+  <li> Privacy: {{ partial "stat.html" (dict "feature" .Params.privacy) }} </li>
+  <li> Are public addresses reusable?: {{ partial "stat.html" (dict "feature" .Params.wallet_reusable) }} </li>
+  <li> Does it support multi-signature wallets?: {{ partial "stat.html" (dict "feature" .Params.wallet_multi) }}</li>
+  <li> How many public addresses can I make with 1 seed: {{ partial "stat.html" (dict "feature" .Params.num_wallets) }}</li>
+  <li> How many seeds are possible?: {{ partial "stat.html" (dict "feature" .Params.num_seeds) }}</li>
+  <li> Public Address format: {{ partial "stat.html" (dict "feature" .Params.wallet_format) }}</li>
+  <li> Seed format: {{ partial "stat.html" (dict "feature" .Params.seed_format) }}</li>
+</ul>
+
+<h2> Distribution of coin supply:</h2>
+<ul>
+  <li> Mining: {{ partial "dist.html" (dict "dist" .Params.dist_mining) }} </li>
+  <li> Staking (Proof of Stake): {{ partial "dist.html" (dict "dist" .Params.dist_staking) }} </li>
+  <li> Pre-release sale (ICO): {{ partial "dist.html" (dict "dist" .Params.dist_ico) }} </li>
+  <li> Free Distribution Event (Airdrop): {{ partial "dist.html" (dict "dist" .Params.dist_airdrop) }}</li>
+  <li> End date for full distribution: <span> {{ .Params.dist_end.text }} </span> </li>
+  <li> Current Supply: {{ partial "data.html" (dict "data" .Params.current_supply.text "date" .Params.last_updated "symbol" .Params.symbol) }} </li>
+  <li> Total Supply:  {{ partial "stat.html" (dict "feature" .Params.total_supply) }} </li>
+</ul>

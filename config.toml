@@ -1,0 +1,69 @@
+baseURL = "/"
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = "Dollarman"
+# theme = ""
+# themesdir = "../.."
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-btc'></i><label style=''>Coin Wiki</label>"
+# identifier = "hugodoc"
+url = "/wiki"
+weight = 20
+
+[[menu.shortcuts]]
+# "<i class='fas fa-fw fa-book-reader'></i>
+name = "<i class='fas fa-fw fa-file-invoice-dollar'></i> <label> Articles </label>"
+url = "/posts"
+weight = 30
+
+[taxonomies]
+  category = "categories"
+
+[related]
+  threshold = 80
+  includeNewer = false
+  toLower = false
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+[params]
+showVisitedLinks = true # default is false
+ordersectionsby = "weight" # ordersectionsby = "title"
+themeStyle = "flex" # "original" or "flex" # default "flex"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+# [Languages]
+# [Languages.en]
+# title = "The Bitcoin Thing"
+# weight = 1
+# languageName = "English"
+#
+# [Languages.fr]
+# title = "Le Chose Bitcoin"
+# weight = 2
+# languageName = "Français"
+
+# [[menu.shortcuts]]
+# pre = "<h3>More</h3>"
+# name = "<i class='fab fa-github'></i> <label>Github repo</label>"
+# identifier = "ds"
+# url = "https://github.com/dollarman/coinwiki"
+# weight = 10

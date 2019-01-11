@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "flex/head.html" . }}
+
+    <style>
+    h4 {margin-bottom: 25px;}
+    li {margin-top: 0;}
+    ul {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    img {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+
+    </style>
+  </head>
+  <body data-url="{{ .RelPermalink }}">
+
+   {{ partial "flex/body-beforecontent.html" . }}
+
+   <h5> Browse wiki by categories or search for a specific one above. </h5>
+   <br>
+   <div style="min-width:100%" class="">
+     <h4> Most Popular: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "bitcoin") }}
+       {{ partial "wiki.html" (dict "coin" "ripple") }}
+       {{ partial "wiki.html" (dict "coin" "ethereum") }}
+       {{ partial "wiki.html" (dict "coin" "litecoin") }}
+     </ul>
+
+     <h4> Payments & Cash Replacements: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "nano") }}
+       {{ partial "wiki.html" (dict "coin" "dash") }}
+       {{ partial "wiki.html" (dict "coin" "monero") }}
+       {{ partial "wiki.html" (dict "coin" "bitcoin") }}
+     </ul>
+
+     <h4> Private Transactions: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "monero") }}
+       {{ partial "wiki.html" (dict "coin" "pivx") }}
+       {{ partial "wiki.html" (dict "coin" "zcash") }}
+       {{ partial "wiki.html" (dict "coin" "dash") }}
+     </ul>
+
+     <h4> Instant & Eco-Friendly DAGs: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "iota") }}
+       {{ partial "wiki.html" (dict "coin" "nano") }}
+     </ul>
+
+     <h4> Centralized B2B: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "eos") }}
+       {{ partial "wiki.html" (dict "coin" "ripple") }}
+       {{ partial "wiki.html" (dict "coin" "stellar") }}
+     </ul>
+
+     <h4> Federated Masternodes: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "dash") }}
+       {{ partial "wiki.html" (dict "coin" "pivx") }}
+       {{ partial "wiki.html" (dict "coin" "neo") }}
+       {{ partial "wiki.html" (dict "coin" "ripple") }}
+     </ul>
+
+     <h4> USD Stable Coins: </h4>
+     <ul>
+       {{ partial "wiki.html" (dict "coin" "circle") }}
+       {{ partial "wiki.html" (dict "coin" "gemini") }}
+       {{ partial "wiki.html" (dict "coin" "dai") }}
+       <!-- {{ partial "wiki.html" (dict "coin" "trueusd") }} -->
+       {{ partial "wiki.html" (dict "coin" "tether") }}
+     </ul>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+    {{ partial "flex/body-aftercontent.html" . }}
+
+    {{ block "footer" . }}
+    {{ end }}
+
+    {{ partial "custom-footer.html" . }}
+  </body>
+</html>
