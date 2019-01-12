@@ -15,6 +15,4 @@ Python:
 Hugo:
 * DocDock theme-based site, with serverless search and graphs.
 * Hugo builds wiki pages entirely from YAML frontmatter which makes it possible to populate wiki from a simple YAML and Python script.
-
-Upcoming:
-* Pandas improvements
+* Hugo builds graph pages by checking their graphType and building the appropriate divs and javascript code. 
