@@ -2,7 +2,7 @@
 
 This repo hosts the code for most of the code powering Dollarman.com. 
 
-For privacy reasons, I use a private repo for the main code I run and export it here after cleaning my comments and credentials. **You can also view the live, Hugo-compiled html-version of the site at https://github.com/dollarman/coinwiki.** That repo is updated at least once daily with the newest data located at https://github.com/Dollarman/coinwiki/tree/master/json.
+For privacy reasons, I use a private repo for the main code I run and export it here after cleaning my comments and credentials. **You can also view the live, Hugo-compiled html-version of the site at https://github.com/dollarman/coinwiki.** That repo is updated at least once daily with the newest data.
 
 There are many different tech stacks involved so I'll describe how I use each below:
 
